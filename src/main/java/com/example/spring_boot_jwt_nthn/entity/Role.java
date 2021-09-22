@@ -17,6 +17,6 @@ public class Role extends BaseEntity{
     private String roleKey;
 
     @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
-    @JoinTable(name = "t_role_permission", joinColumns = {@JoinColumn(name = "role_id")}, inverseJoinColumns = {@JoinColumn(name = "permission_id")})
+    @JoinTable(name = "n_role_permission", joinColumns = {@JoinColumn(name = "role_id")}, inverseJoinColumns = {@JoinColumn(name = "permission_id")})
     private Set<Permission> permissions = new HashSet<>();
 }
